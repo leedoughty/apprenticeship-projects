@@ -3,7 +3,15 @@ const fs = require("fs");
 fs.readFile("sample.txt", (err, data) => {
   if (err) throw err;
   const input = data.toString();
-  const regex = /@softwire\.com/g;
-  const softwireEmails = input.match(regex);
-  console.log(softwireEmails.length);
+  const regex = /@[a-zA-Z\-\.]+/g;
+  const allTheEmails = input.match(regex);
+  const objectOfEmails = {};
+  allTheEmails.forEach((domain) => {
+    if (objectOfEmails[domain] >= 1) {
+      objectOfEmails[domain] += 1;
+    } else {
+      objectOfEmails[domain] = 1;
+    }
+  });
+  console.log(objectOfEmails);
 });
