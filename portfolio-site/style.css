@@ -78,3 +78,7 @@ footer {
 #canvas {
   border: 1px red solid;
 }
+
+#container {
+  background-color: #ffc600;
+}
