@@ -1,0 +1,6 @@
+@mixin fancy-button($color) {
+  color: $color;
+  border: 10px solid $color;
+  border-radius: 3px;
+  padding: 2px 5px;
+}

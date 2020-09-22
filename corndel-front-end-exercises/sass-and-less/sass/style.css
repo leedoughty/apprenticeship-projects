@@ -1,0 +1,36 @@
+.disabled-widget, .important-widget {
+  padding: 3em;
+  display: flex;
+}
+
+body {
+  background-color: blue;
+}
+body div {
+  font-weight: bold;
+}
+
+.accept-button {
+  color: green;
+  border: 10px solid green;
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
+.reject-button {
+  color: red;
+  border: 10px solid red;
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
+.important-widget {
+  font-weight: bold;
+}
+
+.disabled-widget {
+  color: gray;
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=style.css.map */

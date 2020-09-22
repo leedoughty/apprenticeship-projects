@@ -1,0 +1,29 @@
+@import "colours";
+@import "mixins";
+@import "baseWidget";
+
+body {
+  background-color: $backgroundColor;
+  div {
+    font-weight: bold;
+  }
+}
+
+.accept-button {
+  @include fancy-button(green);
+}
+
+.reject-button {
+  @include fancy-button(red);
+}
+
+.important-widget {
+  @extend %base-widget;
+  font-weight: bold;
+}
+
+.disabled-widget {
+  @extend %base-widget;
+  color: gray;
+  cursor: not-allowed;
+}
