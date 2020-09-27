@@ -1,3 +1,5 @@
+@import "colours";
+
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #ffc600;
+  background-color: $backgroundColour;
   padding: 0 30px 0 30px;
   display: flex;
   justify-content: space-between;
@@ -17,7 +19,7 @@ header {
   }
 
   a {
-    color: black;
+    color: $textColour;
     text-decoration: none;
   }
 }
@@ -30,7 +32,7 @@ nav {
   font-weight: 500;
 
   a {
-    color: black;
+    color: $textColour;
     padding-left: 30px;
     text-decoration: none;
   }
@@ -70,7 +72,7 @@ main {
 }
 
 footer {
-  background-color: silver;
+  background-color: $footerColour;
   bottom: 0px;
   display: flex;
   align-items: center;
