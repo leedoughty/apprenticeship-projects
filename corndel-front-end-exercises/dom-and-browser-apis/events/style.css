@@ -1,0 +1,23 @@
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#outer {
+  border: 1px solid blueviolet;
+  width: 100vw;
+  height: 100vh;
+}
+
+#middle {
+  border: 1px solid salmon;
+  width: 60vw;
+  height: 60vh;
+}
+
+#inner {
+  border: 1px solid darkgoldenrod;
+  width: 20vw;
+  height: 20vh;
+}
