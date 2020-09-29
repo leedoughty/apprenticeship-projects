@@ -5,12 +5,11 @@ async function fetchGifs() {
     `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=10`
   );
   const responseData = await response.json();
-  // console.log(responseData);
-  // responseData.data.map((image) => {
-  //   container.innerHTML += `<img src=${image.url}>`;
-  // });
   responseData.data.map((image) => {
-    container.innerHTML += `<img src=${image.images.downsized.url}>`;
+    const gif = document.createElement("img");
+    gif.classList.add("gif-image");
+    gif.src = image.images.downsized.url;
+    container.appendChild(gif);
   });
 }
 

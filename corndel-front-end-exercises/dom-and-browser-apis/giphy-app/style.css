@@ -1,10 +1,17 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 .container {
-  border: 1px solid blue;
-  height: 100vh;
-  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif-image {
+  padding: 20px;
+  width: 30%;
+  height: 30%;
 }
