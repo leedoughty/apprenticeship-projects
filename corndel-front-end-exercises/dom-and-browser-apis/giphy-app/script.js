@@ -1,8 +1,10 @@
 const container = document.querySelector(".container");
+const limit = 10;
+const rating = "g";
 
 async function fetchGifs() {
   const response = await fetch(
-    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=10`
+    `https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=${limit}&rating=${rating}`
   );
   const responseData = await response.json();
   responseData.data.map((image) => {
