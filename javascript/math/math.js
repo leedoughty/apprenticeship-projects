@@ -53,7 +53,7 @@ roundToSignificantDigits(23);
 //
 
 function rabbits(startingRabbits, months) {
-  console.log(startingRabbits * Math.pow(2, months));
+  //   console.log(startingRabbits * Math.pow(2, months));
 }
 
 rabbits(5, 3);
@@ -75,7 +75,7 @@ function returnTheDifference(firstNumber, secondNumber) {
   //   ? console.log(firstNumber - secondNumber)
   //   : console.log(secondNumber - firstNumber);
   // abs - absolute number
-  console.log(Math.abs(firstNumber - secondNumber));
+  //   console.log(Math.abs(firstNumber - secondNumber));
 }
 
 returnTheDifference(22, 37);
@@ -105,5 +105,17 @@ function fuelCalculator(weightOfVehicle) {
   return vehicleFuelCalculatorOverall(weightOfVehicle);
 }
 
-console.log(fuelCalculator(25));
-console.log(fuelCalculator(15));
+// console.log(fuelCalculator(25));
+// console.log(fuelCalculator(15));
+
+//
+
+function getFuelRequirements(mass) {
+  if (mass < 2) {
+    return 0;
+  }
+  const fuelNeeded = Math.floor(mass / 2);
+  return fuelNeeded + getFuelRequirements(fuelNeeded);
+}
+
+console.log(getFuelRequirements(25));
