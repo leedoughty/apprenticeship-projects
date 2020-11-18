@@ -33,11 +33,12 @@ historyButton.addEventListener("mouseout", (event) => {
 
 // console.log(window.navigator.userAgent.indexOf("Chrome") !== -1);
 console.log(window.navigator.userAgent);
-const isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-const isFirefox = window.navigator.userAgent.indexOf("Firefox") !== -1;
-const isEdge = window.navigator.userAgent.indexOf("Edge") !== -1;
-// console.log({ isChrome });
-// console.log({ isFirefox });
+// const isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+const isChrome = window.navigator.userAgent.includes("Chrome");
+const isFirefox = window.navigator.userAgent.includes("Firefox");
+const isEdge = window.navigator.userAgent.includes("Edge");
+console.log({ isChrome });
+console.log({ isFirefox });
 const theHyperlink = document.querySelector(".the-hyperlink");
 // console.log(theHyperlink);
 
