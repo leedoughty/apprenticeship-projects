@@ -63,9 +63,8 @@ console.log({ sizeOfScreen });
 console.log({ heightOfScreen });
 console.log({ availHeightOfScreen });
 
-insertNumberBox.addEventListener("change", (event) => {
-  //   console.log("changed");
-  //   console.log(event.target.value);
+insertNumberBox.addEventListener("keydown", (event) => {
+  console.log("event.target.value", event.target.value);
   if (event.target.value >= sizeOfScreen) {
     sizeOfScreenSentence.innerHTML =
       "Your prediction is LARGER than the screen size";
