@@ -28,11 +28,15 @@
     <!-- http://localhost:52330/javascript/forms/index.html?item-id=45262&name=LeeDoughty&category=fuzzy&description=famegnroign -->
     <!-- There is no BODY for the GET request -->
     <br />
-    <form method="post">
+    <!-- <form method="post" name="article" target="_blank"> -->
+    <form method="post" name="article">
+      <label for="article-id" name="articleId">Article Id:</label>
+      <input type="text" id="article-id" name="articleId" />
+      <!-- <label for="article-name" pattern="/[.,:!?]$/">Article Name:</label> -->
       <label for="article-name">Article Name:</label>
       <input type="text" id="article-name" name="article-name" />
       <label for="author">Author:</label>
-      <input type="text" id="author" name="author" />
+      <input type="text" id="author" name="author" value="Alan Smithee" />
       <label
         >News Type:
         <select id="news-type" name="news-type">
