@@ -79,3 +79,10 @@ theDate.setDate(theDate.getDate() + daysToAdd);
 console.log("Forty Days Ahead: ", theDate);
 
 //
+
+// There are 4 ways to create a new date object:
+
+// new Date()
+// new Date(year, month, day, hours, minutes, seconds, milliseconds)
+// new Date(milliseconds)
+// new Date(date string)
