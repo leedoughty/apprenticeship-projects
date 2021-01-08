@@ -86,3 +86,30 @@ console.log("Forty Days Ahead: ", theDate);
 // new Date(year, month, day, hours, minutes, seconds, milliseconds)
 // new Date(milliseconds)
 // new Date(date string)
+
+const dateSection = document.getElementById("date-section");
+const dateText = document.getElementById("date");
+
+dateText.textContent = new Date();
+
+const marchDateParagraph = document.createElement("P");
+dateSection.appendChild(marchDateParagraph);
+marchDateParagraph.textContent += "The March date is: ";
+marchDateParagraph.textContent += new Date("March 15, 2021 14:42:00");
+
+const forthDaysFromToday = document.createElement("P");
+dateSection.appendChild(forthDaysFromToday);
+// const todaysDate = new Date();
+// console.log(todaysDate.getDate() + 40);
+
+//
+
+const todaysDate = new Date();
+const someFutureDateFromMilliseconds = new Date(9950325252455);
+const myBirthdayInYearMonthDay = new Date(1995, 5, 3);
+const myBirthdayInDateString = new Date("June 3, 1995 12:30:00");
+
+console.log("todaysDate: ", todaysDate);
+console.log("someFutureDateFromMilliseconds: ", someFutureDateFromMilliseconds);
+console.log("myBirthdayInYearMonthDay: ", myBirthdayInYearMonthDay);
+console.log("myBirthdayInDateString: ", myBirthdayInDateString);

@@ -2,7 +2,7 @@ function addOne(arrayOfNumbers) {
   for (let i = 0; i < arrayOfNumbers.length; i++) {
     arrayOfNumbers[i]++;
   }
-  //   console.log(arrayOfNumbers);
+  // console.log(arrayOfNumbers);
 }
 
 addOne([5, 8, 2, 3, 6]);
@@ -10,9 +10,10 @@ addOne([5, 8, 2, 3, 6]);
 //
 
 function addFullTitle(providedNames) {
-  for (name of providedNames) {
-    name.fullTitle = `${name.title} ${name.firstName} ${name.lastName}`;
-    // console.log(name);
+  for (theName of providedNames) {
+    const { title, firstName, lastName } = theName;
+    theName.fullTitle = `${title} ${firstName} ${lastName}`;
+    // console.log(theName);
   }
 }
 
@@ -37,16 +38,19 @@ function ballColourSorter(providedBallArray) {
   let redArray = [];
   let greenArray = [];
   let index = 0;
-  while (index < providedBallArray.length) {
-    if (providedBallArray[index]["colour"] === "red") {
+  while (
+    index < providedBallArray.length &&
+    providedBallArray[index].number % 2 !== 0
+  ) {
+    if (providedBallArray[index].colour === "red") {
       redArray.unshift(providedBallArray[index]);
-    } else if (providedBallArray[index]["colour"] === "green") {
+    } else if (providedBallArray[index].colour === "green") {
       greenArray.push(providedBallArray[index]);
     }
     index += 1;
   }
   let sortedArray = [...redArray, ...greenArray];
-  //   console.log(sortedArray);
+  // console.log(sortedArray);
 }
 
 let ballArray = [
@@ -85,7 +89,7 @@ function ballColourSorterNoEven(providedBallArray) {
   let greenArray = [];
   let index = 0;
   while (index < providedBallArray.length) {
-    if (providedBallArray[index]["number"] === 2) {
+    if (providedBallArray[index].number % 2 === 0) {
       break;
     }
     if (providedBallArray[index]["colour"] === "red") {
@@ -97,7 +101,7 @@ function ballColourSorterNoEven(providedBallArray) {
     index += 1;
   }
   let sortedArray = [...redArray, ...greenArray];
-  console.log(sortedArray);
+  // console.log(sortedArray);
 }
 
 let ballArray2 = [
@@ -175,3 +179,60 @@ const objectExample = {
 
 const foo = typeof 5;
 // string
+
+var i;
+for (i = 0; i < 10; i++) {
+  if (i === 3) {
+    break;
+  }
+  // console.log("the number is", i);
+}
+
+var j;
+for (j = 0; j < 10; j++) {
+  if (j === 3) {
+    continue;
+  }
+  // console.log("the number is", j);
+}
+
+// while
+var k = 0;
+while (k < 10) {
+  // console.log("The number is " + k);
+  k++;
+}
+
+// console.log("--------");
+// do while
+var l = 0;
+do {
+  // console.log("The number is " + l);
+  l++;
+} while (l < 5);
+
+// -----------
+
+// var numbers = [];
+// for (var i = 0; i < 10; i++) {
+//   numbers.push(Math.round(Math.abs(Math.random() * 10)));
+// }
+
+// var sum = 0;
+
+// for (var j = 0; j < 10; j = j++) {
+//   sum += sum[j];
+// }
+// console.log(sum);
+
+function change(student, course) {
+  student = "JavaScript Student";
+  course.name = "JavaScript";
+  course.grade = 100;
+}
+
+var sampleCourse = { name: "HTML", grade: 90 };
+var sampleStudent = "HTML Student";
+
+change(sampleStudent, sampleCourse);
+console.log(sampleStudent, sampleCourse.name, sampleCourse.grade);
