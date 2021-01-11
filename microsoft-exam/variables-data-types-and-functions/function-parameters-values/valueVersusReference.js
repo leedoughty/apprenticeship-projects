@@ -33,6 +33,9 @@ var sampleStudent = "HTML Student";
 change(sampleStudent, sampleCourse);
 console.log(sampleStudent, sampleCourse.name, sampleCourse.grade);
 
+// objects (non-primitive) passed by reference
+// primitives passed by value
+
 // Find HTML student JavaScript student example
 
 console.log("-----------");
@@ -54,9 +57,9 @@ console.log("-----------");
 let myString2 = "lee";
 console.log(myString2);
 
-function changeString2(myString2) {
-  myString2 = "heather";
+function changeString2(name) {
+  name = "heather";
 }
 
-changeString2();
+changeString2(myString2);
 console.log(myString2);
