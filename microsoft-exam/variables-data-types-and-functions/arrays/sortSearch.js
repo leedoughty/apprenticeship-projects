@@ -23,3 +23,8 @@ console.log(newNumbers);
 
 const foundFortyTwo = newNumbers.find((element) => element === 42);
 console.log(foundFortyTwo);
+
+// reverse
+
+const some = [1, 42, 3, 21, 10000];
+console.log(some.reverse());

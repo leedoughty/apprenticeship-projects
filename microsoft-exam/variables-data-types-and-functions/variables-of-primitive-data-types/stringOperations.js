@@ -14,6 +14,12 @@ console.log(sentence.charAt(1));
 
 console.log(sentence[6]);
 
+const arrayOfTheWholeString = sentence.split();
+console.log(arrayOfTheWholeString);
+
+const arrayOfLetters = sentence.split("");
+console.log(arrayOfLetters);
+
 const arrayOfWords = sentence.split(" ");
 console.log(arrayOfWords);
 

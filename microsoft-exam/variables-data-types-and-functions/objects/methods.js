@@ -11,3 +11,9 @@ const person = {
 };
 
 console.log(person.fullName());
+
+// Object.keys
+
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(Object.entries(person));
