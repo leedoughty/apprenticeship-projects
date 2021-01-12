@@ -1,0 +1,9 @@
+body {
+  /* background-color: #0063b2ff; */
+  background-color: rgb(200, 200, 200);
+}
+
+.newClass {
+  color: blue;
+  size: 100px;
+}
