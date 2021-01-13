@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form method="get">
+      <label for="item-id">Item ID:</label>
+      <input type="number" id="item-id" name="item-id" />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <label for="category">Product Category:</label>
+      <select id="category" name="category">
+        <option value="stuffed">stuffed</option>
+        <option value="fuzzy">fuzzy</option>
+        <option value="warm">warm</option>
+        <option value="cold">cold</option>
+        <option value="prickly">prickly</option>
+      </select>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea>
+      <input type="submit" value="submit" />
+    </form>
+    <!-- GET -->
+    <!-- http://localhost:52330/javascript/forms/index.html?item-id=45262&name=LeeDoughty&category=fuzzy&description=famegnroign -->
+    <!-- There is no BODY for the GET request -->
+    <br />
+    <!-- <form method="post" name="article" target="_blank"> -->
+    <form method="post" name="article">
+      <label for="article-id" name="articleId">Article Id:</label>
+      <input type="text" id="article-id" name="articleId" />
+      <!-- <label for="article-name" pattern="/[.,:!?]$/">Article Name:</label> -->
+      <label for="article-name">Article Name:</label>
+      <input type="text" id="article-name" name="article-name" />
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" value="Alan Smithee" />
+      <label
+        >News Type:
+        <select id="news-type" name="news-type">
+          <option value="uk">uk</option>
+          <option value="world">world</option>
+          <option value="business">business</option>
+          <option value="politics">politics</option>
+          <option value="tech">tech</option>
+        </select>
+      </label>
+      <label for="article-content">Article Content:</label>
+      <textarea id="article-content" name="article-content"></textarea>
+      <input type="submit" value="submit" />
+    </form>
+    <!-- POST -->
+    <!-- http://localhost:52330/javascript/forms/index.html -->
+    <!-- article-name: lee
+    author: lee doughty
+    news-type: tech
+    article-content: aaaaaa -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
