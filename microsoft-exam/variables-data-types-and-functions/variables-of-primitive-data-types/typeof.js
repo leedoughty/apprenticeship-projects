@@ -38,3 +38,20 @@ console.log(typeof objectExample);
 // string
 const foo = typeof 5;
 console.log(typeof foo);
+
+console.log("-----------------");
+
+var n;
+console.log(typeof n);
+
+var a = "3.4";
+console.log(typeof a);
+
+var textArray = ["Welcome", "and", "hello"];
+console.log(typeof textArray);
+
+var c = 2.4;
+console.log(typeof c);
+
+var tag = null;
+console.log(typeof tag);
