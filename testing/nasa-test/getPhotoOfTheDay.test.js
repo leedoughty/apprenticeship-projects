@@ -16,12 +16,22 @@ describe("Middleware - getPhotoOfTheDay", () => {
     fakeNext = jest.fn();
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("should make a GET request to the expected APOD URL", async () => {
     const BASE_URL = "https://api.nasa.gov/planetary/apod";
 
     await getPhotoOfTheDay(fakeRequest, fakeResponse, fakeNext);
 
     expect(axios.get).toHaveBeenCalledWith(`${BASE_URL}?api_key=${API_KEY}`);
+  });
+
+  it("should call axios one time", async () => {
+    await getPhotoOfTheDay(fakeRequest, fakeResponse, fakeNext);
+
+    expect(axios.get).toHaveBeenCalledTimes(1);
   });
 
   // it.skip("should return the expected data from the NASA api", async () => {
